@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Presenter Index</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: white;
+      color: #111;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      height: 60px;
+      border-bottom: 1px solid #ddd;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 1000;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .alphabet-nav {
+      position: sticky;
+      top: 60px;
+      z-index: 900;
+      height: 38px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .alphabet-nav a {
+      color: #777;
+      text-decoration: none;
+    }
+
+    .alphabet-nav a.active,
+    .alphabet-nav a:hover {
+      color: #111;
+    }
+
+    .container {
+      padding: 0 20px 60px;
+    }
+
+    .letter-group {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      border-bottom: 1px solid #ddd;
+      padding: 36px 0;
+      scroll-margin-top: 110px;
+    }
+
+    .letter-symbol {
+      width: 86px;
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .names {
+      columns: 4;
+      column-gap: 60px;
+    }
+
+    .name {
+      break-inside: avoid;
+      font-size: 13px;
+      line-height: 1.65;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .name:hover {
+      text-decoration: underline;
+    }
+
+    .count {
+      color: #777;
+      font-size: 11px;
+      margin-left: 4px;
+    }
+
+    @media (max-width: 1000px) {
+      .names {
+        columns: 3;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .alphabet-nav {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 20px;
+      }
+
+      .letter-group {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .names {
+        columns: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">archiLECTURE</a>
+  <a href="index.html">MENU</a>
+</header>
+
+<nav class="alphabet-nav" id="alphabetNav"></nav>
+
+<main class="container" id="presenterIndex"></main>
+
+<script>
+  const alphabetNav = document.getElementById("alphabetNav");
+  const presenterIndex = document.getElementById("presenterIndex");
+
+  Papa.parse("Library.csv", {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function(results) {
+      const data = results.data.map(row => {
+        const normalized = {};
+
+        Object.keys(row).forEach(key => {
+          normalized[key.trim().toLowerCase()] = row[key];
+        });
+
+        return normalized;
+      }).filter(d => d.presenter);
+
+      const presenterCounts = {};
+
+      data.forEach(row => {
+        String(row.presenter)
+          .split(";")
+          .map(name => name.trim())
+          .filter(Boolean)
+          .forEach(name => {
+            presenterCounts[name] = (presenterCounts[name] || 0) + 1;
+          });
+      });
+
+      const presenter = Object.keys(presenterCounts)
+        .sort((a, b) => a.localeCompare(b));
+
+      const grouped = {};
+
+      presenter.forEach(name => {
+        let letter = name.charAt(0).toUpperCase();
+
+        if (!letter.match(/[A-Z]/)) {
+          letter = "#";
+        }
+
+        if (!grouped[letter]) grouped[letter] = [];
+        grouped[letter].push(name);
+      });
+
+      buildAlphabetNav(grouped);
+      buildpresenterIndex(grouped, presenterCounts);
+    }
+  });
+
+  function buildAlphabetNav(grouped) {
+    const letters = ["#", ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+
+    alphabetNav.innerHTML = letters.map(letter => {
+      if (grouped[letter]) {
+        return `<a href="#section-${letter}">${letter}</a>`;
+      } else {
+        return `<span style="color:#ccc;">${letter}</span>`;
+      }
+    }).join("");
+  }
+
+  function buildpresenterIndex(grouped, counts) {
+    const letters = ["#", ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+
+    letters.forEach(letter => {
+      if (!grouped[letter]) return;
+
+      const section = document.createElement("section");
+      section.className = "letter-group";
+      section.id = `section-${letter}`;
+
+      const namesHTML = grouped[letter].map(name => `
+        <div class="name" onclick="goTopresenter('${escapeForJS(name)}')">
+          ${name}
+          <span class="count">(${counts[name]})</span>
+        </div>
+      `).join("");
+
+      section.innerHTML = `
+        <div>
+          <div class="letter-symbol">${letter}</div>
+        </div>
+        <div class="names">${namesHTML}</div>
+      `;
+
+      presenterIndex.appendChild(section);
+    });
+  }
+
+  function goTopresenter(name) {
+    window.location.href =
+      `results.html?search=${encodeURIComponent(name)}`;
+  }
+
+  function escapeForJS(str) {
+    return String(str)
+      .replace(/\\/g, "\\\\")
+      .replace(/'/g, "\\'");
+  }
+</script>
+
+</body>
+</html>

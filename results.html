@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtered Results</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: white;
+      color: #111;
+    }
+
+    header {
+      height: 60px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    header a {
+      color: #111;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .page-title {
+      padding: 30px 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2px;
+    }
+
+    .item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: #eee;
+    }
+
+    .item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .item:hover img {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background: rgba(255,255,255,0.9);
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .item:hover .overlay {
+      opacity: 1;
+    }
+
+    .empty {
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .site-title,
+.nav-link {
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.search-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(360px, 40vw);
+}
+
+#siteSearch {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#siteSearch:focus {
+  outline: none;
+  border-color: #111;
+}
+  </style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="site-title">archiLECTURE</a>
+
+<div class="search-wrap">
+  <input id="siteSearch" type="text" placeholder="SEARCH" />
+</div>
+
+<a href="index.html" class="nav-link">MENU</a>
+</header>
+
+<div class="page-title" id="pageTitle"></div>
+<div class="container" id="resultsGrid"></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const filter = params.get("filter");
+  const value = params.get("value");
+
+  const pageTitle = document.getElementById("pageTitle");
+  const grid = document.getElementById("resultsGrid");
+
+  pageTitle.textContent = `${filter}: ${value}`;
+
+  Papa.parse("Library.csv", {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function(results) {
+      let allData = results.data.map((row, index) => {
+        const normalized = { id: index };
+
+        Object.keys(row).forEach(key => {
+          normalized[key.trim().toLowerCase()] = row[key];
+        });
+
+        return normalized;
+      }).filter(d => d.title && d.link);
+
+      const search = params.get("search");
+
+let filtered = [];
+
+if (search) {
+  const q = search.toLowerCase();
+
+  pageTitle.textContent = `Search: ${search}`;
+
+  filtered = allData.filter(row => {
+    return Object.values(row).some(value =>
+      String(value).toLowerCase().includes(q)
+    );
+  });
+
+} else {
+  pageTitle.textContent = `${filter}: ${value}`;
+
+  filtered = allData.filter(row => {
+    if (!row[filter]) return false;
+
+    if (filter === "date") {
+      const date = new Date(row.date);
+      if (isNaN(date)) return false;
+
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const half = month <= 5 ? "January–June" : "July–December";
+      const group = `${year} / ${half}`;
+
+      return group === value;
+    }
+
+    const values = String(row[filter])
+      .split(";")
+      .map(v => v.trim());
+
+    return values.includes(value);
+  });
+}
+
+renderResults(filtered);
+setupSearch();
+    }
+  });
+
+  function renderResults(data) {
+    grid.innerHTML = "";
+
+    if (!data.length) {
+      grid.innerHTML = `<div class="empty">No results found.</div>`;
+      return;
+    }
+
+    data.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "item";
+
+      const videoId = getYouTubeId(item.link);
+      const thumb = videoId
+        ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+        : "";
+
+      div.innerHTML = `
+        <img src="${thumb}" />
+        <div class="overlay">
+          <strong>${item.title}</strong><br>
+          ${item.presenter || ""}<br>
+          ${item.school || ""}
+        </div>
+      `;
+
+      div.onclick = () => {
+        window.location.href = `video.html?id=${item.id}`;
+      };
+
+      grid.appendChild(div);
+    });
+  }
+
+  function getYouTubeId(url) {
+    const match = String(url).match(/[?&]v=([^&]+)/);
+    return match ? match[1] : null;
+  }
+
+  function setupSearch() {
+  const searchInput = document.getElementById("siteSearch");
+  if (!searchInput) return;
+
+  searchInput.addEventListener("keydown", event => {
+    if (event.key === "Enter") {
+      const query = searchInput.value.trim();
+
+      if (query) {
+        window.location.href =
+          `results.html?search=${encodeURIComponent(query)}`;
+      }
+    }
+  });
+}
+</script>
+
+</body>
+</html>

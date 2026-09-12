@@ -1,0 +1,1882 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "Academy of Art University  "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.4009,
+                    37.7876
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "SUNY College of Technology at Alfred"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -78.2245,
+                    42.3097
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MI",
+                "Institution": "Andrews University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.4189,
+                    41.9317
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "AZ",
+                "Institution": "Arizona State University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.9343,
+                    33.4215
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "AL",
+                "Institution": "Auburn University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.3955,
+                    32.597
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IN",
+                "Institution": "Ball State University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.3955,
+                    40.1957
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MA",
+                "Institution": "Boston Architectural College"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0813,
+                    42.3493
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "OH",
+                "Institution": "Bowling Green State University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.6513,
+                    41.3748
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "California Baptist University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.3877,
+                    33.9736
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "California College of the Arts"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.4019,
+                    37.7765
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "California Polytechnic State University, San Luis"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.66,
+                    35.2874
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "California State Polytechnic Univ (Pomona)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.7203,
+                    34.0687
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "PA",
+                "Institution": "Carnegie Mellon University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -79.9537,
+                    40.4443
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "DC",
+                "Institution": "Catholic University of America"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.9999,
+                    38.9296
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "SC",
+                "Institution": "Clemson University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.8344,
+                    34.6713
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "Columbia University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.9626,
+                    40.8075
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "Cooper Union "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.9916,
+                    40.7302
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "Cornell University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.495,
+                    42.439
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "PA",
+                "Institution": "Drexel University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.1936,
+                    39.954
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MO",
+                "Institution": "Drury University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.2874,
+                    37.2204
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MN",
+                "Institution": "Dunwoody College of Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.2607,
+                    44.9778
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "WV",
+                "Institution": "Fairmont State University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.1621,
+                    39.4853
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "FL",
+                "Institution": "Florida Agricultural and Mechanical University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.2807,
+                    30.4383
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "FL",
+                "Institution": "Florida Atlantic University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.1373,
+                    26.1224
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "FL",
+                "Institution": "Florida International University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.374,
+                    25.757
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "GA",
+                "Institution": "Georgia Institute of Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.3963,
+                    33.7701
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "VA",
+                "Institution": "Hampton University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.3452,
+                    37.0299
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MA",
+                "Institution": "Harvard University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.1097,
+                    42.3739
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "DC",
+                "Institution": "Howard University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.0139,
+                    38.9222
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IL",
+                "Institution": "Illinois Institute of Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.6315,
+                    41.8401
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IN",
+                "Institution": "Indiana University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.5213,
+                    39.1672
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IA",
+                "Institution": "Iowa State University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.6486,
+                    42.0267
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IL",
+                "Institution": "Judson University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -88.2717,
+                    42.0347
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "KS",
+                "Institution": "Kansas State University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.57,
+                    39.1824
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NJ",
+                "Institution": "Kean University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.2315,
+                    40.6792
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MI",
+                "Institution": "Kendall College of Art and     Design of Ferris State"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.4839,
+                    43.6975
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "GA",
+                "Institution": "Kennesaw State University   "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.5404,
+                    33.9309
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "OH",
+                "Institution": "Kent State University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.3579,
+                    41.1527
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MI",
+                "Institution": "Lawrence Technological University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.2733,
+                    42.4672
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "LA",
+                "Institution": "Louisiana State University    "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -91.1817,
+                    30.4371
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "LA",
+                "Institution": "Louisiana Tech University     "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.6409,
+                    32.5243
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "PA",
+                "Institution": "Marywood University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.6605,
+                    41.4122
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MA",
+                "Institution": "Massachusetts College of     Art & Design"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0997,
+                    42.3365
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MA",
+                "Institution": "Massachusetts Institute of   Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0921,
+                    42.3588
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "OH",
+                "Institution": "Miami University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.7409,
+                    39.5132
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MS",
+                "Institution": "Mississippi State University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -88.8192,
+                    33.4515
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MT",
+                "Institution": "Montana State University     "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.0524,
+                    45.6787
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MD",
+                "Institution": "Morgan State University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.5847,
+                    39.3439
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NJ",
+                "Institution": "New Jersey Institute of Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.1793,
+                    40.7265
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "New York City College of Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.9856,
+                    40.6922
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "New York Institute of Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.9827,
+                    40.765
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "New York Institute of Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.6072,
+                    40.8162
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "NewSchool of Architecture   and Design"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.1607,
+                    32.7176
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NC",
+                "Institution": "North Carolina State University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -78.6578,
+                    35.7878
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "ND",
+                "Institution": "North Dakota State University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.7898,
+                    46.8772
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MA",
+                "Institution": "Northeastern University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0875,
+                    42.3367
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "VT",
+                "Institution": "Norwich University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.0163,
+                    44.4688
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "OK",
+                "Institution": "Oklahoma State University   "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.071,
+                    36.1293
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "PA",
+                "Institution": "Pennsylvania State University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.86,
+                    40.7934
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "OR",
+                "Institution": "Portland State University     "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.6778,
+                    45.5152
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "TX",
+                "Institution": "Prairie View A&M University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.4041,
+                    30.1075
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "Pratt Institute "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    40.6881,
+                    -73.9536
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NJ",
+                "Institution": "Princeton University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.6568,
+                    40.3487
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "Rensselaer Polytechnic Institute"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.6788,
+                    42.7284
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "RI",
+                "Institution": "Rhode Island School of Design"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.4128,
+                    41.8239
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "TX",
+                "Institution": "Rice University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    29.7173,
+                    -95.4019
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "Rochester Institute of Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.6715,
+                    43.0847
+                ]
+            },
+            "id": 66
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "RI",
+                "Institution": "Roger Williams University     "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.2786,
+                    41.7173
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "GA",
+                "Institution": "Savannah College of Art and Design"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -81.0998,
+                    32.0739
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IL",
+                "Institution": "School of the Art Institute     of Chicago"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.6239,
+                    41.7128
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "SD",
+                "Institution": "South Dakota State University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.7983,
+                    44.3113
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "SCI-Arc"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2387,
+                    34.0416
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IL",
+                "Institution": "Southern Illinois University   Carbondale"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.2282,
+                    37.7012
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "Syracuse University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.1442,
+                    43.0467
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "PA",
+                "Institution": "Temple University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.1552,
+                    39.9797
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "Texas A & M University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.3387,
+                    30.6128
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "TX",
+                "Institution": "Texas Tech University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -101.8703,
+                    33.593
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "The City College of New York"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.9476,
+                    40.8224
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "The New School "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.9938,
+                    40.7355
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "AZ",
+                "Institution": "The School of Architecture"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.9419,
+                    33.5671
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IL",
+                "Institution": "The School of the Art Institute of Chicago"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.6206,
+                    41.8757
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "PA",
+                "Institution": "Thomas Je?erson University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.2047,
+                    40.0333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "LA",
+                "Institution": "Tulane University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.1326,
+                    29.9401
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "AL",
+                "Institution": "Tuskegee University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -85.7116,
+                    32.4269
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NY",
+                "Institution": "University at Bu?alo, The State University of New"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -78.79,
+                    43.001
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "AZ",
+                "Institution": "University of Arizona "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -110.943,
+                    32.2376
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "AR",
+                "Institution": "University of Arkansas "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -94.1745,
+                    36.0638
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "University of California, Berkeley"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.273,
+                    37.8715
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "University of California, Los Angeles"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.4449,
+                    34.0709
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "OH",
+                "Institution": "University of Cincinnati "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.4895,
+                    39.1397
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CO",
+                "Institution": "University of Colorado, Denver"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.9903,
+                    39.7392
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MI",
+                "Institution": "University of Detroit - Mercy"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.1379,
+                    42.4141
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "FL",
+                "Institution": "University of Florida "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.3414,
+                    29.6509
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "FL",
+                "Institution": "University of Hartford "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.7154,
+                    41.7468
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "HI",
+                "Institution": "University of Hawaii at Manoa"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -157.8187,
+                    21.295
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "TX",
+                "Institution": "University of Houston "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.3423,
+                    29.7287
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "ID",
+                "Institution": "University of Idaho "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.9999,
+                    46.7317
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IL",
+                "Institution": "University of Illinois at Chicago"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.6298,
+                    41.8781
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IL",
+                "Institution": "University of Illinois Urbana-Champaign"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -88.2272,
+                    40.1106
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "KS",
+                "Institution": "University of Kansas "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -95.2511,
+                    38.9577
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "KY",
+                "Institution": "University of Kentucky "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -84.5035,
+                    38.031
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "LA",
+                "Institution": "University of Louisiana at Lafayette"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -92.0233,
+                    30.2141
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "ME",
+                "Institution": "University of Maine at Augusta"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -69.7795,
+                    44.3148
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MD",
+                "Institution": "University of Maryland "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.9373,
+                    38.9858
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MA",
+                "Institution": "University of Massachusetts Amherst"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.5267,
+                    42.3911
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "TN",
+                "Institution": "University of Memphis "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -89.9428,
+                    35.119
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "FL",
+                "Institution": "University of Miami "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.2714,
+                    25.7218
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MI",
+                "Institution": "University of Michigan "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.7382,
+                    42.278
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MN",
+                "Institution": "University of Minnesota "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -93.2354,
+                    44.9747
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NE",
+                "Institution": "University of Nebraska-Lincoln"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -96.7026,
+                    40.8136
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NV",
+                "Institution": "University of Nevada, Las Vegas"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.1438,
+                    36.1078
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NM",
+                "Institution": "University of New Mexico "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -106.6245,
+                    35.0844
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "NC",
+                "Institution": "University of North Carolina at Charlotte"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.7345,
+                    35.3064
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "IN",
+                "Institution": "University of Notre Dame "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -86.2376,
+                    41.7002
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "OK",
+                "Institution": "University of Oklahoma "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.4453,
+                    35.2063
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "OR",
+                "Institution": "University of Oregon "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.6541,
+                    45.5534
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "PA",
+                "Institution": "University of Pennsylvania "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.1945,
+                    39.9515
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "FL",
+                "Institution": "University of South Florida "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -82.4078,
+                    28.0527
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "University of Southern California"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2832,
+                    34.0194
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "TN",
+                "Institution": "University of Tennessee "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -83.929,
+                    35.9535
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "TX",
+                "Institution": "University of Texas at Arlington"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.7341,
+                    30.2849
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "TX",
+                "Institution": "University of Texas at Austin"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -97.7341,
+                    30.2849
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "TX",
+                "Institution": "University of Texas at San Antonio"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -98.625,
+                    29.5806
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "DC",
+                "Institution": "University of the District of Columbia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.0592,
+                    38.9397
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "UT",
+                "Institution": "University of Utah "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.8425,
+                    40.7644
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "VA",
+                "Institution": "University of Virginia "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -78.507,
+                    38.0336
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "WA",
+                "Institution": "University of Washington "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.3032,
+                    47.6569
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "WI",
+                "Institution": "University of Wisconsin-Milwaukee"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -87.8806,
+                    43.0739
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "VA",
+                "Institution": "Virginia Polytechnic Institute and State"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -80.4234,
+                    37.2296
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "WA",
+                "Institution": "Washington State University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.1793,
+                    46.731
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MO",
+                "Institution": "Washington University in St. Louis"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -90.305,
+                    38.648
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "MA",
+                "Institution": "Wentworth Institute of Technology"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -71.0892,
+                    42.3394
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CA",
+                "Institution": "Woodbury University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.3087,
+                    34.1811
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "State": "CT",
+                "Institution": "Yale University "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -72.9312,
+                    41.3083
+                ]
+            }
+        }
+    ]
+}

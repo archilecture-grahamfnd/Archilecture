@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: white;
+      color: #111;
+    }
+
+    header {
+      height: 60px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    header a {
+      color: #111;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: black;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .info h1 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .info p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .label {
+      color: #777;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+
+    .tags {
+      margin-top: 24px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 0 6px 6px 0;
+      padding: 5px 8px;
+      border: 1px solid #ccc;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .related {
+      padding: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .related h2 {
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2px;
+    }
+
+    .related-item {
+      cursor: pointer;
+      background: #eee;
+    }
+
+    .related-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .related-item div {
+      padding: 8px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .site-title,
+.nav-link {
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.search-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(360px, 40vw);
+}
+
+#siteSearch {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#siteSearch:focus {
+  outline: none;
+  border-color: #111;
+}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <<a href="index.html" class="site-title">archiLECTURE</a>
+
+<div class="search-wrap">
+  <input id="siteSearch" type="text" placeholder="SEARCH" />
+</div>
+
+<a href="index.html" class="nav-link">MENU</a>
+</header>
+
+<main class="page">
+  <section>
+    <div class="video-wrapper" id="videoContainer"></div>
+  </section>
+
+  <aside class="info" id="videoInfo"></aside>
+</main>
+
+<section class="related">
+  <h2>Related Videos</h2>
+  <div class="related-grid" id="relatedGrid"></div>
+</section>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = Number(params.get("id"));
+
+  const videoContainer = document.getElementById("videoContainer");
+  const videoInfo = document.getElementById("videoInfo");
+  const relatedGrid = document.getElementById("relatedGrid");
+
+  let allData = [];
+
+  Papa.parse("Library.csv", {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function(results) {
+      allData = results.data.map((row, index) => {
+        const normalized = { id: index };
+
+        Object.keys(row).forEach(key => {
+          normalized[key.trim().toLowerCase()] = row[key];
+        });
+
+        return normalized;
+      }).filter(d => d.title && d.link);
+
+      const item = allData.find(d => d.id === id);
+
+      if (!item) {
+        videoInfo.innerHTML = "<p>Video not found.</p>";
+        return;
+      }
+
+      document.title = item.title || "Video";
+
+      renderVideo(item);
+      renderInfo(item);
+      renderRelated(item);
+      setupSearch();
+    }
+  });
+
+  function renderVideo(item) {
+    const videoId = getYouTubeId(item.link);
+
+    if (!videoId) {
+      videoContainer.innerHTML = "<p>Invalid video link.</p>";
+      return;
+    }
+
+    videoContainer.innerHTML = `
+      <iframe
+        src="https://www.youtube.com/embed/${videoId}"
+        allowfullscreen>
+      </iframe>
+    `;
+  }
+
+  function renderInfo(item) {
+    videoInfo.innerHTML = `
+      <h1>${item.title || ""}</h1>
+
+      <p><span class="label">Presenter</span><br>${item.presenter || ""}</p>
+      <p><span class="label">School</span><br>${item.school || ""}</p>
+      <p><span class="label">Date</span><br>${item.date || ""}</p>
+      <p><span class="label">Based</span><br>${item.based || ""}</p>
+      <p><span class="label">Disciplinary</span><br>${item.disciplinary || ""}</p>
+
+      <div class="tags">
+        ${renderTags(item.topic)}
+      </div>
+    `;
+  }
+
+  function renderTags(topicString) {
+    if (!topicString) return "";
+
+    return topicString
+      .split(";")
+      .map(t => t.trim())
+      .filter(Boolean)
+      .map(t => `<span class="tag">${t}</span>`)
+      .join("");
+  }
+
+  function renderRelated(item) {
+    relatedGrid.innerHTML = "";
+
+    const itemTopics = splitValues(item.topic);
+
+    const related = allData
+      .filter(d => d.id !== item.id)
+      .filter(d => {
+        const topics = splitValues(d.topic);
+        return topics.some(t => itemTopics.includes(t));
+      })
+      .slice(0, 8);
+
+    related.forEach(relatedItem => {
+      const videoId = getYouTubeId(relatedItem.link);
+      const thumb = videoId
+        ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+        : "";
+
+      const div = document.createElement("div");
+      div.className = "related-item";
+
+      div.innerHTML = `
+        <img src="${thumb}" />
+        <div>${relatedItem.title}</div>
+      `;
+
+      div.onclick = () => {
+        window.location.href = `video.html?id=${relatedItem.id}`;
+      };
+
+      relatedGrid.appendChild(div);
+    });
+  }
+
+  function splitValues(value) {
+    if (!value) return [];
+
+    return String(value)
+      .split(";")
+      .map(v => v.trim())
+      .filter(Boolean);
+  }
+
+  function getYouTubeId(url) {
+    const match = String(url).match(/[?&]v=([^&]+)/);
+    return match ? match[1] : null;
+  }
+
+  function setupSearch() {
+  const searchInput = document.getElementById("siteSearch");
+  if (!searchInput) return;
+
+  searchInput.addEventListener("keydown", event => {
+    if (event.key === "Enter") {
+      const query = searchInput.value.trim();
+
+      if (query) {
+        window.location.href =
+          `results.html?search=${encodeURIComponent(query)}`;
+      }
+    }
+  });
+}
+</script>
+
+</body>
+</html>
