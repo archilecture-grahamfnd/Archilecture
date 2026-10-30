@@ -87,7 +87,7 @@
 
   Promise.all([
     loadCSV("Library.csv"),
-    fetch("institutions.geojson").then(response => response.json())
+    fetch("Institutions.geojson").then(response => response.json())
   ]).then(([csvData, geojson]) => {
     lectureCounts = countLecturesBySchool(csvData);
     drawInstitutionMap(geojson, lectureCounts);
